@@ -6,6 +6,7 @@
 <% end -%>
 
 <% if user_signed_in? -%>
-  <p>Check out my highlights, bro:</p>
+  <p>Create a new highlight:</p>
+  <%= render 'form' %>
   <p><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></p>
 <% end -%>
