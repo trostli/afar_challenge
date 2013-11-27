@@ -6,7 +6,13 @@
 <% end -%>
 
 <% if user_signed_in? -%>
-  <p>Create a new highlight:</p>
+  <p>Highlights:</p>
+  <ul id='highlight_area'>
+    <% @highlights.each do |highlight| %>
+    <%= render 'highlight', highlight: highlight %>
+    <% end %>
+  </ul>
+
   <%= render 'form' %>
   <p><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></p>
 <% end -%>

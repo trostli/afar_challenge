@@ -7,9 +7,15 @@ class HighlightsController < ApplicationController
 
   def create
     @highlight = Highlight.new
+    p params
     @highlight.title = params[:highlight][:title]
     @highlight.description = params[:highlight][:description]
     @highlight.save
     User.find(current_user.id).highlights << @highlight
+    redirect_to highlights_path
+  end
+
+  def show
+    @highlight = Highlight.find(params[:id].to_i)
   end
 end
