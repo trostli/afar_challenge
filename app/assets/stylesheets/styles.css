@@ -1,0 +1,17 @@
+body {
+  background-color: #ecf0f1;
+  margin: 0 auto;
+  width: 750px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+#highlight_area {
+  background-color: #bdc3c7;
+  border: 2px solid black;
+  width: 250px;
+  padding: 15px;
+}
+
+ul {
+  list-style: none;
+}

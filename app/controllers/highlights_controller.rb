@@ -7,7 +7,6 @@ class HighlightsController < ApplicationController
 
   def create
     @highlight = Highlight.new
-    p params
     @highlight.title = params[:highlight][:title]
     @highlight.description = params[:highlight][:description]
     @highlight.save
