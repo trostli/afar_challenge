@@ -3,6 +3,7 @@ class CreateHighlights < ActiveRecord::Migration
     create_table :highlights do |t|
       t.string :title
       t.string :description
+      t.belongs_to :user
 
       t.timestamps
     end
