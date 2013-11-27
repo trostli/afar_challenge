@@ -1,0 +1,3 @@
+class HighlightsController < ApplicationController
+
+end
